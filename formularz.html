@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formularz.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header container">
+            <div class="logo">
+                <a href="#">
+                <i class="fa-solid fa-moon"></i>
+                <h1>NightRest<span>.com</span></h1>
+                </a>
+            </div>
+            
+            <nav class="menu_główne">
+                <ul>
+                    <li><a href="#"><img src="https://flagcdn.com/w40/pl.png" width="20" alt="PL"> Polski</a></li>
+                    <li><a href="#"><i class="fa-solid fa-question-circle"></i> Pomoc</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-user"></i> Moje konto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--formularz-->
+<div class="formularz">
+    <form>
+    <div class="form-grid">
+    <div class="pole">
+    <label>Imię <span>*</span></label>
+    <input type="text" name="imie" required />
+    </div>
+    
+    
+    <div class="pole">
+    <label>Nazwisko <span>*</span></label>
+    <input type="text" name="nazwisko" required />
+    </div>
+    
+    
+    <div class="pole full">
+    <label>Adres e-mail <span>*</span></label>
+    <input type="email" name="email" required />
+    <small>Na ten adres zostanie wysłane potwierdzenie</small>
+    </div>
+    
+    
+    <div class="pole full">
+    <label>Kraj/region <span>*</span></label>
+    <select name="kraj" required>
+    <option value="">Wybierz kraj</option>
+    <option value="PL" selected>Polska</option>
+    <option value="DE">Niemcy</option>
+    <option value="CZ">Czechy</option>
+    </select>
+    </div>
+    
+    
+    <div class="pole full">
+    <label>Numer telefonu <span>*</span></label>
+    <div class="telefony">
+    <select name="prefix">
+    <option value="+48" selected>PL +48</option>
+    <option value="+49">DE +49</option>
+    <option value="+420">CZ +420</option>
+    </select>
+    <input type="tel" name="telefon" required />
+    </div>
+    <small>Wymagany przez obiekt w celu zweryfikowania rezerwacji</small>
+    </div>
+    </div>
+    
+    
+    <div class="actions">
+    <button type="submit">Zarezerwuj</button>
+    </div>
+    </form>
+    </div>
+        
+   
+</body>
+</html>

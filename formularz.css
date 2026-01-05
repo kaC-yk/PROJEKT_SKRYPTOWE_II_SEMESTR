@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.header {
+    background-color: #584630;
+    color: white;
+    padding: 10px 0;
+}
+
+.header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 32px;
+    color: #febb02;
+}
+
+.logo h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.logo span {
+    color: #febb02;
+}
+
+.menu_główne ul {
+    display: flex;
+    gap: 25px;
+}
+
+.menu_główne a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.search-section {
+    background-color: #E6D5C9;
+    padding: 40px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-section .container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #584630;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+
+
+
+
+.formularz {
+    max-width: 100%;
+    max-height: 100%;
+    background:#fff;
+    border:1px solid #ddd;
+    padding:24px;
+    }
+
+    .form-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    }
+    .pole{ display:flex; flex-direction:column; }
+    label { font-weight:600; margin-bottom:6px; }
+    label span { color:#c00; }
+    input, select {
+    padding:10px 12px;
+    border:1px solid #bbb;
+    border-radius:4px;
+    font-size:14px;
+    }
+    small { color:#666; margin-top:6px; }
+    .full { grid-column:1 / -1; }
+    .telefony { display:flex; gap:10px; }
+    .telefony select { max-width:120px; }
+    .actions {
+    display:flex;
+    justify-content:flex-end;
+    margin-top:30px;
+    }
+    button {
+    padding:12px 28px;
+    font-size:18px;
+    background:#fff;
+    border:2px solid #000;
+    border-radius:14px;
+    cursor:pointer;
+    }
+    button:hover { background:#000; color:#fff; }
+

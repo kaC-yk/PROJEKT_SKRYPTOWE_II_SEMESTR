@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightRest.com</title>
+    <link rel="stylesheet" href="wyszukiwarka.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header container">
+            <div class="logo">
+                <a href="#">
+                <i class="fa-solid fa-moon"></i>
+                <h1>NightRest<span>.com</span></h1>
+                </a>
+            </div>
+            
+            <nav class="menu_główne">
+                <ul>
+                    <li><a href="#"><img src="https://flagcdn.com/w40/pl.png" width="20" alt="PL"> Polski</a></li>
+                    <li><a href="#"><i class="fa-solid fa-question-circle"></i> Pomoc</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-user"></i> Moje konto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+       <!--formularz -->
+        <form method="post" id="form">
+    <section class="wyszukiwanie">
+        <div class="container">
+            <h2>Znajdź swój idealny nocleg w naszym serwisie</h2>
+                <div class="miejsce_końcowe">
+                    <label for="miejsce"><i class="fas fa-search-location"></i> Miejscowość, do której chcesz się zabrać wraz z nami ;)</label>
+                    <select id="miejsce" name="miejsce">
+                        <option value="" selected disabled>Wybierz miejscowość...</option>
+                        <option>Bytom</option>
+                        <option>Sierakowice</option>
+                        <option>Kościerzyna</option>
+                    </select>
+                </div>
+                <div class="daty">
+                    <div class="zameldowanie">
+                        <label for="zameldowanie_w"><i class="fas fa-calendar-alt"></i> Zameldowanie</label>
+                        <input type="date" id="zameldowanie_w" value="" name="zameldowanie">
+                    </div>
+                    <div class="wymeldowanie">
+                        <label for="wymeldowanie_z"><i class="fas fa-calendar-alt"></i> Wymeldowanie</label>
+                        <input type="date" id="wymeldowanie_z" value="" name="wymeldowanie">
+                    </div>
+                </div>
+                    
+                <div class="goście_i_pokoje">
+                    <label for="goście"><i class="fas fa-user-friends"></i> Goście</label>
+                    <select id="goście" name="goscie">
+                        <option value="" selected disabled>Wybierz liczbę gości...</option>
+                        <option>1 dorosły - 0 dzieci - 1 pokój</option>
+                        <option>1 dorosły - 1 dziecko - 1 pokój</option>
+                        <option>2 dorośli - 0 dzieci - 1 pokój</option>
+                        <option>2 dorośli - 1 dziecko - 2 pokoje</option>
+                        <option>2 dorośli - 2 dzieci - 2 pokoje</option>
+                    </select>
+                </div>
+                <!--formularz -->
+                <br>
+                <div class="wyszukaj">
+                    <button type="submit" class="szukaj">
+                        <i class="fas fa-search"></i> Szukaj
+                    </button>
+
+                     <!--skrypt wysyłania-->
+        <script> 
+                document.getElementById("form").addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(e.target);
+
+                const res = await fetch("http://localhost:3335/szukaj", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await res.json();
+                alert("Zapisano wyszukiwanie!");
+});
+    </script>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="stopka">
+        <div class="container">
+            <div class="stopka-góra">
+                <div class="stopka1">
+                    <h3>NightRest.com</h3>
+                    <p>Znajdź idealny nocleg dla siebie i swojej rodziny. Porównaj ceny i zarezerwuj świadomie to czego potrzebujesz.</p>
+                    <div class="sociale">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="stopka2">
+                    <h4>O nas</h4>
+                    <ul>
+                        <li><a href="#">O firmie NightRest.com</a></li>
+                        <li><a href="#">Pomoc dla klientów</a></li>
+                        <li><a href="#">Kontakt telefoniczny</a></li>
+                    </ul>
+                </div>
+                
+                <div class="stopka2">
+                    <h4>Dla klientów oraz partnerów</h4>
+                    <ul>
+                        <li><a href="#">Podróże biznesowe</a></li>
+                        <li><a href="#">Podróże z rodziną</a></li>
+                        <li><a href="#">Wystaw swoją nieruchomość</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="stopka-dół">
+                <p>&copy; 2025 NightRest.com. Wszelkie prawa zastrzeżone.</p>
+                <ul>
+                    <li><a href="#">Warunki użytkowania</a></li>
+                    <li><a href="#">Warunki partnerstwa</a></li>                    
+                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="#">Ustawienia plików cookie</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
